@@ -76,20 +76,13 @@ def file_formater(temp_filename):
 
 if __name__ == "__main__":
     temp_filename = "Data/temp_buscocasa.json"
-    # settings = get_project_settings()
-    # os.environ['SCRAPY_SETTINGS_MODULE'] = 'buscocasa.settings'
-    # settings_module_path = os.environ['SCRAPY_SETTINGS_MODULE']
-    # settings.setmodule(settings_module_path, priority='project')
 
     command = 'scrapy crawl buscocasa-crawl'
 
-    while True:    
-        # process = CrawlerProcess(settings)
-        # process.crawl(BuscocasaCrawlSpider)
-        # process.start()
-
+    while True:
         os.system(command)
         file_formater(temp_filename)
+        os.remove(temp_filename)
 
         print(f'{"-"*10} Script will Restart in {time_interval_hours} Hours {"-"*10}')
         sleep(60*60*time_interval_hours)
