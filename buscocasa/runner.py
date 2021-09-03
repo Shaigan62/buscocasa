@@ -82,8 +82,6 @@ if __name__ == "__main__":
     while True:
         os.system(command)
         file_formater(temp_filename)
-        # os.remove(temp_filename)
 
         print(f'{"-"*10} Script will Restart in {time_interval_hours} Hours {"-"*10}')
-        # sleep(60*60*time_interval_hours)
-        sleep(15)
+        sleep(60*60*time_interval_hours)
