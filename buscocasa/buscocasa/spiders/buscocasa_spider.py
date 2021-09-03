@@ -171,6 +171,6 @@ class BuscocasaCrawlSpider(CrawlSpider):
     parse_spider = BuscocasaParseSpider()
     
     rules = (
-        Rule(LinkExtractor(restrict_css=listing_css)),
+        # Rule(LinkExtractor(restrict_css=listing_css)),
         Rule(LinkExtractor(restrict_css=leads_css), callback=parse_spider.parse),
     )
