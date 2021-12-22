@@ -63,7 +63,7 @@ def remove_temp(temp_filename):
 def file_formater(temp_filename):
     df, file_name = check_records(temp_filename)
     
-    df['image_urls'] = df['image_urls'].apply(lambda x: ', '.join(x))
+    df['image_urls'] = df['image_urls'].apply(lambda x: ', '.join(x) if isinstance(x, list) else x)
 
     df = df[column_order(df)]
 
