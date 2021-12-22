@@ -80,6 +80,7 @@ if __name__ == "__main__":
     command = 'scrapy crawl buscocasa-crawl'
 
     while True:
+        remove_temp(temp_filename)
         os.system(command)
         file_formater(temp_filename)
 
